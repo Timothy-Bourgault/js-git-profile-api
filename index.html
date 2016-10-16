@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <script src="build/js/vendor.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
+    <title>Git Selector</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pull down information from any GitHub user profile!</h1>
+      <div class="box">
+        <form id="inputForm">
+        <label for="userName">Enter a valid Git Hub user name:</label>
+        <input id="userName" type="text">
+        <button class="btn-warning">Retrieve User Profile Data!</button>
+      </form>
+      </div>
+      <div id="errorMessage"></div>
+      <div id="userResults"></div>
+      <div id="userRepos"></div>
+    </div>
+  </body>
+</html>
