@@ -10,11 +10,11 @@ var displayUser = function(response) {
 
 $(document).ready(function() {
   var currentGitUser = new GitUser();
-  $('#searchBtn').click(function(event) {
+  $('#searchBtn').click(function() {
     event.preventDefault();
     var userName = $('#userName').val();
     $('#userName').val('');
-    currentGitUser.getUser(userName);
-    $('#showUser').text(userName);
+    currentGitUser.getUser(userName, displayUser);
+    
   });
 });
