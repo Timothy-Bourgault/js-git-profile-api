@@ -1,5 +1,11 @@
 var GitUser = require('./../js/backend.js').getGitUser;
 
+var displayRepos = function(response) {
+  for (var i = 0; i < response.length; i++) {
+    $('#userRepos').append("<li>" + response[i].name + " <b>Description: </b>" + response[i].description + "</li>");
+  }
+};
+
 var displayUser = function(response) {
   $('#showUser').text('');
   $('#showUser').append("<h2>" + response.name + "</h2>");
@@ -14,7 +20,8 @@ $(document).ready(function() {
     event.preventDefault();
     var userName = $('#userName').val();
     $('#userName').val('');
+    $('#userRepos').val('');
     currentGitUser.getUser(userName, displayUser);
-
+    currentGitUser.getRepos(userName, displayRepos);
   });
 });
