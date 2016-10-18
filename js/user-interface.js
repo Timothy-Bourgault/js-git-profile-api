@@ -15,6 +15,6 @@ $(document).ready(function() {
     var userName = $('#userName').val();
     $('#userName').val('');
     currentGitUser.getUser(userName, displayUser);
-    
+
   });
 });
