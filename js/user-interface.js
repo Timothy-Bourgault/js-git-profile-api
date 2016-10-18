@@ -2,7 +2,7 @@ var GitUser = require('./../js/backend.js').getGitUser;
 
 var displayRepos = function(response) {
   for (var i = 0; i < response.length; i++) {
-    $('#userRepos').append("<li>" + response[i].name + " <b>Description: </b>" + response[i].description + "</li>");
+    $('#userRepos').append("<h3><strong>" + response[i].name + " </strong><b>Description: </b><I>" + response[i].description + "</I></h3>");
   }
 };
 
